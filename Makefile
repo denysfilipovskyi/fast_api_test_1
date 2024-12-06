@@ -17,4 +17,5 @@ init_db:
 	docker compose exec app poetry run python3 users_crm/init_db.py
 
 test:
+	PYTHONPATH=$(PWD)/users_crm poetry install
 	PYTHONPATH=$(PWD)/users_crm poetry run pytest
